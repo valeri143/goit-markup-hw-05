@@ -64,12 +64,13 @@ font-size: 16px;
 line-height: 1.5;
 color: var(--primary-color);
 text-decoration: none;
+transition: color 250ms var(--animation-cubic);
 
 }
 .navigation:hover, .navigation:focus{
     color: var(--brand-color);
 }
-.navigation::after{
+.current::after{
     position: absolute;
     left: 0;
     bottom: 0;
@@ -78,13 +79,13 @@ text-decoration: none;
     height: 4px;
     background-color: var(--brand-color);
     border-radius: 2px;
-    opacity: 0;
+    /* opacity: 0; */
    transition: opacity 250ms var(--animation-cubic);
 
 }
-.navigation:hover::after,.navigation:focus::after{
+/* .current:hover::after,.current:focus::after{
     opacity: 1;
-}
+} */
 .navigation-link{
      padding-top: 24px;
     padding-bottom: 24px;
@@ -121,6 +122,7 @@ font-size: 16px;
 line-height: 1.5px;
 color: var(--secondary-color);
 text-decoration: none;
+transition: color 250ms var(--animation-cubic);
 }
 .linkm:not(first-child){
     margin-left: 40px;
@@ -167,7 +169,7 @@ line-height: 1.18;
     cursor: pointer;
     font-family: inherit;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-   
+   transition: box-shadow 250ms var(--animation-cubic);
 }
 .primary-btn:hover{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -341,6 +343,8 @@ padding-top: 32px;
     border-radius: 4px;
     color: #8E8F99;
     border-color: #8E8F99;
+    transition: color 250ms var(--animation-cubic);
+
 }
 
 .customers-brand{
@@ -407,15 +411,17 @@ color: #E7E9FC;
     height: 40px;
     background:var(--secondary-color);
     border-radius: 50%;
+        transition: background-color 250ms var(--animation-cubic);
+
 }
 .icon-media:not(:last-child){
     margin-right: 16px;
 }
 .icon-media:hover{
-    background: #31D0AA;
+    background-color: #31D0AA;
 }
 .icon-media:focus{
-    background: #31D0AA;
+    background-color: #31D0AA;
 }
 /* PORTFOLIO */
 .psection{
@@ -442,13 +448,15 @@ border-radius: 4px;
     letter-spacing: 0.04em;
     cursor: pointer;
     font-family: inherit;
+     transition: color 250ms var(--animation-cubic),  background-color 250ms var(--animation-cubic);
+
 }
 .item-btn:not(:last-child){
     margin-right: var(--main-margin);
 }
 .btn:hover, .btn:focus{
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    background:var(--brand-color);
+    background-color:var(--brand-color);
     color: var(--background-color);
 }
 .btn:active{
@@ -513,7 +521,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 .portfolio:hover .overlay{
     transform: translateY(0);
 }
-.portfolio:focus .overlay{
+.link:focus .overlay{
     transform: translateY(0);
 }
 .link:hover, .link:focus{
