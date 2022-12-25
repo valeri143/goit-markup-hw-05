@@ -568,3 +568,9 @@ border-radius: 4px;
     border-radius: 50%;
     cursor: pointer;
 }
+.modal-btn:hover, .modal-btn:focus{
+    background: #404BBF;
+}
+.modal-btn:hover .modal-icon, .modal-btn:focus .modal-icon{
+    fill: var(--background-color);
+}
